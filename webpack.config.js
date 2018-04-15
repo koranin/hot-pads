@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HashOutput = require('webpack-plugin-hash-output');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './js/main.js',
@@ -12,9 +12,13 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: {loader: 'babel-loader'}
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'sass-loader']
+        })
       }
     ]
   },
@@ -22,7 +26,11 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    new HtmlWebpackPlugin({template: path.resolve(__dirname, 'js/index.html')}),
-    new HashOutput()
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'js/index.html')
+    }),
+    new ExtractTextPlugin({
+      filename: '[name][hash].css'
+    })
   ]
 };
