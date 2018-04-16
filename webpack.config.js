@@ -19,6 +19,10 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: ['css-loader', 'sass-loader']
         })
+      },
+      {
+        test: /\.(jpeg|jpg|png|gif)$/,
+        use: 'file-loader'
       }
     ]
   },
