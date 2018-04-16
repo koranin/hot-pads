@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const URL_LOADER_SIZE_LIMIT = 1048576 - 1;
+
 module.exports = {
   entry: './js/main.js',
   output: {
@@ -23,6 +25,13 @@ module.exports = {
       {
         test: /\.(jpeg|jpg|png|gif)$/,
         use: 'file-loader'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'url-loader',
+        options: {
+          limit: URL_LOADER_SIZE_LIMIT
+        }
       }
     ]
   },
