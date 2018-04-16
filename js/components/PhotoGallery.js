@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 const Photo = ({ url, caption }) => (
   <div>
@@ -7,10 +7,8 @@ const Photo = ({ url, caption }) => (
   </div>
 );
 
-const PhotoGallery = ({ images }) => (
-  <div>
-    {images.map((image) => <Photo {...image} />)}
-  </div>
+const PhotoGallery = ({ photos }) => (
+  <div>{photos.map(photo => <Photo {...photo} />)}</div>
 );
 
 export default PhotoGallery;
