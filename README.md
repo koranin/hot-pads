@@ -14,14 +14,14 @@
 
 2. Create PhotoGallery component with the following requirements:
     
-    - [ ] The PhotoGallery should take an array of images.
+    - [x] The PhotoGallery should take an array of images.
 
-    - [ ] Each image has url and caption.
+    - [x] Each image has url and caption.
 
-    - [ ] The caption should be displayed over the image.
+    - [x] The caption should be displayed over the image.
 
-    - [ ] The PhotoGallery either click or swipe through images.
+    - [x] The PhotoGallery either click or swipe through images.
 
-    - [ ] Smoothly animating the swipe and transition between images.
+    - [x] Smoothly animating the swipe and transition between images.
 
-    - [ ] Handle edge cases.
+    - [x] Handle edge cases.

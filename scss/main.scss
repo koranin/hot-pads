@@ -8,3 +8,21 @@ body {
 h1, h2, h3 {
   color: $theme-primary-color;
 }
+
+.image { 
+  position: relative;
+  text-align: center;
+  color: red; 
+
+  h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    width: 400px;
+    height: 400px;
+  }
+}
