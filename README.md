@@ -25,3 +25,9 @@
     - [x] Smoothly animating the swipe and transition between images.
 
     - [x] Handle edge cases.
+
+## Build
+
+```
+npm run build
+```

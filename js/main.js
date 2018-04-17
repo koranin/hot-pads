@@ -4,14 +4,6 @@ import ReactDOM from 'react-dom';
 import PhotoGallery from './components/PhotoGallery';
 import images from './images';
 
-/*const images = [
-  { url: 'url1', caption: 'cap1' },
-  { url: 'url2', caption: 'cap2' },
-  { url: 'url3', caption: 'cap3' }
-];*/
-
-console.log(images);
-
 ReactDOM.render(
   <PhotoGallery images={images} />, 
   document.getElementById('app')
